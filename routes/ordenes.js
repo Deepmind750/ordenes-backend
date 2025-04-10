@@ -1,14 +1,15 @@
 
-const { crearOrden, obtenerOrdenes } = require("../controllers/ordenCtrl");
+const express = require("express");
+const router = express.Router();
 
-// Ruta para registrar órdenes
+const { crearOrden } = require("../controllers/ordenCtrl");
+
+// Ruta para registrar órdenes (POST)
 router.post("/ordenes", crearOrden);
 
-// Nueva ruta para obtener órdenes
-router.get("/ordenes", obtenerOrdenes);
-
-// Ruta de prueba GET para verificar conexión
+// Ruta de prueba (GET)
 router.get("/test", (req, res) => {
   res.send("¡Ruta GET funcionando!");
 });
 
+module.exports = router;
