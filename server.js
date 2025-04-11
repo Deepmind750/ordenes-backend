@@ -17,5 +17,5 @@ const firmaRouter=require("./routes/firma");
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-Console.log(`✅ Servidor backend corriendo en el puerto ${PORT}`);
+console.log(`✅ Servidor backend corriendo en el puerto ${PORT}`);
 });
