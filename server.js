@@ -11,11 +11,14 @@ require("./db/init");
 
 // Rutas
 const ordenesRouter = require("./routes/ordenes");
-const firmaRouter=require("./routes/firma");
-//Render espera que uses exactamente este puerto const PORT=process.env.PORT;
+const firmaRouter = require("./routes/firma");
 
+app.use("/api", ordenesRouter);
+app.use("/api", firmaRouter);
+
+// Render espera que uses exactamente este puerto
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-console.log(`✅ Servidor backend corriendo en el puerto ${PORT}`);
+  console.log(`✅ Servidor backend corriendo en el puerto ${PORT}`);
 });
