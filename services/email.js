@@ -30,13 +30,13 @@ const enviarCorreo = async (orden) => {
   const mailOptions = [
     {
       from: `"Sistema de Ordenes" <${process.env.EMAIL_USER}>`,
-      to: "ebatista@barceloneta.pr.gov", // Email principal
+      to: "lnieves@barceloneta.pr.gov", // Email principal
       subject: "Nueva Orden de Trabajo",
       html: mensajeHTML,
     },
     {
       from: `"Sistema de Ordenes" <${process.env.EMAIL_USER}>`,
-      to: "7879040470@claropr.com", // Envío a SMS del supervisor
+      to: "7874105518@text.libertypr.com", // Envío a SMS del supervisor
       subject: "", // No todos los proveedores aceptan subject
       text: mensajeSMS,
     }
