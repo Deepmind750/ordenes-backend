@@ -19,6 +19,10 @@ const enviarCorreo = async (orden) => {
       <p><strong>Descripción:</strong><br/>${orden.descripcion}</p>
     `
   };
+  console.log('Destino del correo:', process.env.EMAIL_TO);
+
+  console.log('FROM:', msg.from);
+console.log('TO:', msg.to);
 
   await sgMail.send(msg);
 };
